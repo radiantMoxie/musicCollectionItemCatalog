@@ -1,0 +1,52 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<body>
+
+	<div class="row divider green">
+		<div class="col-md-12"></div>
+	</div>
+	<div class="row banner menu">
+		<div class="col-md-11 col-md-offset-1 padding-none">
+			<h1>{{artist.name}}
+			<figure class="creator">
+				<img src={{artist.picture}}>
+				<figcaption>Page curated by {{creator.name}}</figcaption>
+			</figure>
+			</h1>
+
+		</div>
+	</div>
+
+<div class = 'flash'>
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			<ul>
+				{% for message in messages %}
+					<li> <strong> {{ message }} </strong> </li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+	{% endwith %}
+</div>
+
+
+{% if albums == [] %}
+	<p> There are currently no albums in the collection by this artist. </p>
+
+
+{% else %}
+
+	{% for album in albums %}
+
+	<p>
+		<a href = '{{url_for('showAlbumInfo', artist_id = artist.id, album_id = album.id)}}'>{{album.name}} ({{album.year_released}})</a>
+	</p>
+
+	{% endfor %}
+
+{% endif %}
+
+
+</body>
+{% endblock %}

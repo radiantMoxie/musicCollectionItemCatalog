@@ -1,0 +1,26 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<body>
+	<div class="row divider green">
+		<div class="col-md-12"></div>
+	</div>
+	<div class="row banner menu">
+		<div class="col-md-11 col-md-offset-1 padding-none">
+			<h1>{{album.name}}
+			<figure class = 'creator'>
+				<img src = {{album.picture}}>
+				<figcaption> Released {{album.year_released}}</figcaption>
+			</figure>
+			</h1>
+
+		</div>
+	</div>
+
+	<br><br><div><p>{{album.description}}</p></div></br>
+
+	<h3><a href = '{{url_for('showAlbums', artist_id = artist.id)}}'>Return to Artist Page</a></h3>
+
+
+</body>
+{% endblock %}
