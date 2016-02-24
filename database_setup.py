@@ -11,6 +11,7 @@ class User(Base):
 	id = Column(Integer, primary_key = True)
 	name = Column(String(250), nullable = False)
 	email = Column(String(250), nullable = False)
+	picture = Column(String(250))
 
 
 class Artist(Base):
@@ -20,7 +21,7 @@ class Artist(Base):
 	name = Column(String(250), nullable = False)
 	picture = Column(String(250))
 	user_id = Column(Integer, ForeignKey('user.id'))
-	user = relationship(User)
+	user = relationship(User, cascade = 'delete')
 
 	#Return object data in easily serializable format
 	@property
@@ -40,9 +41,9 @@ class Album(Base):
 	year_released = Column(Integer)
 	picture = Column(String(250))
 	artist_id = Column(Integer, ForeignKey('artist.id'))
-	artist = relationship(Artist)
+	artist = relationship(Artist, cascade = 'delete')
 	user_id = Column(Integer, ForeignKey ('user.id'))
-	user = relationship(User)
+	user = relationship(User, cascade = 'delete')
 
 	#Return object data in easily serializable format
 	@property

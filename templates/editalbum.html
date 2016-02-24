@@ -12,29 +12,37 @@
 	</div>
 	<div class="row">
 		<div class="col-md-6 col-md-offset-1 padding-top">
-			<form action = '{{url_for('editAlbum', artist_id = artist_id, album_id=album.id)}}' method = 'POST'>
+			<form action = 
+			'{{url_for('editAlbum', artist_id = artist_id, album_id=album.id)}}'
+				method = 'POST'>
 			<div class="form-group">
 		<dl>
 			<dt><label for="name">Name:</label></dt>
-				<dd><input type = 'text' maxlength="100" name = 'name' placeholder = '{{album.name}}'></dd></br>
+				<dd><input type = 'text' maxlength="100" name = 'name' 
+					placeholder = '{{album.name}}'></dd></br>
 
 			<dt><label for="name">Description:</label></dt>
-				<dd><input type = 'text' maxlength="10000" name = 'description' placeholder = '{{album.description}}'></dd></br>
+				<dd><input type = 'text' maxlength="10000" name = 'description' 
+					placeholder = '{{album.description}}'></dd></br>
 
 			<dt><label for="name">Year Released:</label></dt>
-				<dd><input type = 'text' maxlength="100" name = 'year_released' placeholder = '{{album.year_released}}'></dd></br>
+				<dd><input type = 'text' maxlength="100" name = 'year_released' 
+					placeholder = '{{album.year_released}}'></dd></br>
 
 			<dt><label for="name">Album Cover Image Location</label></dt>
-				<dd><input type = 'text' maxlength="100" name = 'picture' placeholder = '{{album.picture}}'></dd></br>
+				<dd><input type = 'text' maxlength="100" name = 'picture' 
+					placeholder = '{{album.picture}}'></dd></br>
 		</dl>
 	</div>
 		<button type="submit" class="btn btn-default" id="submit">
-			<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Edit</button>
+			<span class="glyphicon glyphicon-ok" aria-hidden="true">
+			</span>Edit</button>
 	</form>
 
 	<a href = '{{url_for('showAlbums', artist_id = artist_id)}}'>
 			<button class="btn btn-default delete">
-				<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cancel</button>
+				<span class="glyphicon glyphicon-remove" aria-hidden="true">
+				</span> Cancel</button>
 
 
 

@@ -2,15 +2,20 @@
 {% block content %}
 {% include "header.html" %}
 <body>
-	<h1>Are you sure you want to delete {{(album.artist).name}}'s album {{album.name}}?</h1>
+<h1>Are you sure you want to delete {{(album.artist).name}}'s album {{album.name}}?</h1>
 
-	<form action = '{{url_for('deleteAlbum', artist_id = artist_id, album_id = album.id)}}' method = 'POST'>
-	<button type="submit" class="btn btn-default delete" id="submit" type="submit">
-	<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Delete</button></br></br>
+	<form action = 
+		'{{url_for('deleteAlbum', artist_id = artist_id, album_id = album.id)}}' 
+		method = 'POST'>
+	<button type="submit" class="btn btn-default delete" id="submit" 
+		type="submit">
+	<span class="glyphicon glyphicon-trash" aria-hidden="true">
+	</span>Delete</button></br></br>
 
 	</form>
 	<a href = '{{url_for('showAlbums', artist_id = artist_id)}}'>
 		<button class="btn btn-default delete">
-		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cancel</button></a>
+		<span class="glyphicon glyphicon-remove" aria-hidden="true">
+		</span> Cancel</button></a>
 </body>
 {% endblock %}

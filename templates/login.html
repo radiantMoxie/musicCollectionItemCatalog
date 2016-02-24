@@ -47,7 +47,6 @@ function signInCallback(authResult) {
 			setTimeout(function() {
 			window.location.href = "/artists";
 			}, 4000);
-
 			} else if (authResult['error']) {
 	console.log('There was an error: ' + authResult['error']);
 	} else {
@@ -71,7 +70,6 @@ window.fbAsyncInit = function() {
 	// use version 2.2
 	version: 'v2.2'});
 	};
-
 // Load the SDK asynchronously
 (function(d, s, id) {
 	var js, fjs = d.getElementsByTagName(s)[0];
@@ -80,7 +78,6 @@ window.fbAsyncInit = function() {
 	js.src = "//connect.facebook.net/en_US/sdk.js";
 	fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));
-
 // Here we run a very simple test of the Graph API after login is
 // successful.  See statusChangeCallback() for when this call is made.
 function sendTokenToServer() {

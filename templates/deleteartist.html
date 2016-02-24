@@ -5,17 +5,21 @@
 
 	<h1>Are you sure you want to delete {{artist.name}}?</h1></br>
 
-	<form action = '{{url_for('deleteArtist', artist_id = artist.id)}}' method = 'POST'>
+	<form action = '{{url_for('deleteArtist', artist_id = artist.id)}}' 
+	method = 'POST'>
 
-	<button type="submit" class="btn btn-default delete" id="submit" type="submit">
-	<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Yes, I'm Sure</button>
+	<button type="submit" class="btn btn-default delete" id="submit" 
+	type="submit">
+	<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+	Yes, I'm Sure</button>
 	<br>
 	<br>
 
 </form>
 <a href = '{{url_for('showAllArtists')}}'>
 		<button class="btn btn-default delete">
-		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cancel</button>
+		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> 
+		Cancel</button>
 	</a>
 
 
