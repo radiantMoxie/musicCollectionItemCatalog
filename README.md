@@ -8,10 +8,10 @@ It's highly recommended that you use a VM to run this project -- that way any ch
 
 1. Install Vagrant (http://vagrantup.com) and VirtualBox (http://www.virtualbox.org).
 2. Clone the fullstacknanodegreevm repository from Udacity's page on GitHub (https://github.com/udacity/fullstack-nanodegree-vm).
-3. Launch the Vagrant VM by typing 'vagrant up' in the directory fullstack/vagrant from the terminal. 
-4. Sign into the VM by typing 'vagrant ssh' in the directory fullstack/vagrant from the terminal. 
-5. To end the connection to the VM type 'exit'.
-6. To shut down the VM while still saving your work, type 'vagrant halt'.
+3. Launch the Vagrant VM by typing `vagrant up` in the directory fullstack/vagrant from the terminal. 
+4. Sign into the VM by typing `vagrant ssh` in the directory fullstack/vagrant from the terminal.
+5. To end the connection to the VM type `exit`.
+6. To shut down the VM while still saving your work, type `vagrant halt`.
 
 ## Section 2: Requirements
 * Flask == 0.10.1
@@ -21,17 +21,17 @@ It's highly recommended that you use a VM to run this project -- that way any ch
 * Oauth2client == 2.0.0
 * Requests == 2.2.1
 
-These are included in a separate file called "requirements.txt". Install using 'pip install -r requirements.txt'.
+These are included in a separate file called "requirements.txt". Install using `pip install -r requirements.txt`.
 
 ## Section 3: Installation
-Clone the repo by typing 'git clone https://github.com/radiantMoxie/musicCollectionItemCatalog.git' into the terminal.
+Clone the repo by typing `git clone https://github.com/radiantMoxie/musicCollectionItemCatalog.git` into the terminal.
 
 ## Section 4: Set Up
-1. Run database setup to establish the database ('python database_setup.py')
-2. If you'd like to populate the database with some artists and albums, run manyalbums. ('python manyalbums.py')
+1. Run database setup to establish the database (`python database_setup.py`)
+2. If you'd like to populate the database with some artists and albums, run manyalbums. (`python manyalbums.py`)
 
 ## Section 5: How to run
-1. Run the application ('python application.py').
+1. Run the application (`python application.py`).
 2. Visit http://localhost:8000 locally on your browser. Enjoy!
 
 ## Section 6: Usage
