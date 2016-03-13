@@ -1,4 +1,5 @@
 # Project: Item Catalog  - Yana Kesala
+* Part of Udacity's Full Stack Web Developer Nanodegree
 
 ## Section 0: Intro
 This is a web application of a music collection. You can login with Google Plus or Facebook. When you are authenticated you may add new artists to the collection. Each artist's 'creator' has the ability to edit, delete, or add albums to that artist's discography. You do not have the ability to perform CRUD operations on artists you did not create.
